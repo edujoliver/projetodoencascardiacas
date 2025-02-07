@@ -1,194 +1,194 @@
-# 🫀 **Previsão de Doença Cardíaca**
+# 🪀 **Heart Disease Prediction**
 
-Este projeto é uma aplicação web interativa que prevê o risco de doenças cardíacas com base em características clínicas. Ele utiliza aprendizado de máquina com um modelo **Random Forest**, implementado em Python com Flask, e uma interface amigável desenvolvida em HTML, CSS e JavaScript.
+This project is an interactive web application that predicts the risk of heart disease based on clinical features. It utilizes machine learning with a **Random Forest** model, implemented in Python with Flask, and a user-friendly interface developed in HTML, CSS, and JavaScript.
 
-Este projeto é destinado para fins educacionais e demonstra a integração de um modelo de Machine Learning com uma aplicação web.
-
----
-
-## 🧪 **Funcionalidades**
-
-- Previsão do risco de doenças cardíacas com base em 14 variáveis clínicas.
-- Interface amigável para entrada de dados do paciente.
-- Classificação em **baixo**, **moderado** ou **alto risco**.
-- Mensagem personalizada para orientar o próximo passo do paciente.
-- Totalmente responsivo para diferentes tamanhos de tela.
+This project is intended for educational purposes and demonstrates the integration of a Machine Learning model with a web application.
 
 ---
 
-## 🚀 **Tecnologias Utilizadas**
+## 🧪 **Features**
+
+- Predicts the risk of heart disease based on 14 clinical variables.
+- User-friendly interface for patient data input.
+- Classification into **low**, **moderate**, or **high risk**.
+- Personalized message to guide the patient's next steps.
+- Fully responsive for different screen sizes.
+
+---
+
+## 🚀 **Technologies Used**
 
 ### **Backend**
-- **Python**: Linguagem principal do projeto.
-- **Flask**: Framework web para hospedar o modelo de Machine Learning.
-- **Scikit-learn**: Para treinar e salvar o modelo de aprendizado de máquina.
+- **Python**: Main programming language of the project.
+- **Flask**: Web framework to host the Machine Learning model.
+- **Scikit-learn**: For training and saving the machine learning model.
 
 ### **Frontend**
-- **HTML5**: Estrutura da interface.
-- **CSS3**: Estilização e layout responsivo.
-- **Bootstrap**: Framework para design responsivo.
-- **JavaScript**: Para conectar o frontend ao backend.
+- **HTML5**: Interface structure.
+- **CSS3**: Styling and responsive layout.
+- **Bootstrap**: Framework for responsive design.
+- **JavaScript**: To connect the frontend to the backend.
 
 ---
 
-## ⚙️ **Estrutura do Projeto**
+## ⚙️ **Project Structure**
 
 ```
 .
 ├── backend
-│   ├── app.py                  # Código principal do servidor Flask.
-│   ├── modelo_doenca_cardiaca.pkl  # Modelo de Machine Learning salvo.
+│   ├── app.py                  # Main Flask server code.
+│   └── heart_disease_model.pkl  # Saved Machine Learning model.
 ├── frontend/
-│   ├── index.html           # Interface web.
-│   ├── app.js               # Lógica do frontend.
-│   └── styles.css           # Estilo da interface.
-├── requirements.txt         # Dependências do projeto.
-└── README.md                # Documentação do projeto.
+│   ├── index.html           # Web interface.
+│   ├── app.js               # Frontend logic.
+│   └── styles.css           # Interface styling.
+├── requirements.txt         # Project dependencies.
+└── README.md                # Project documentation.
 ```
 
-## 🛠️ **Como Executar o Projeto**
+## 🛠️ **How to Run the Project**
 
-### **Pré-requisitos**
-- Python 3.8 ou superior.
-- Navegador web (ex.: Google Chrome, Firefox).
-- Editor de texto ou IDE (opcional): Visual Studio Code, PyCharm, etc.
+### **Prerequisites**
+- Python 3.8 or higher.
+- Web browser (e.g., Google Chrome, Firefox).
+- Text editor or IDE (optional): Visual Studio Code, PyCharm, etc.
 
-## 📊 **Variáveis de Entrada**
+## 📊 **Input Variables**
 
-### **Dados Necessários**
-1. **Idade**  
-   - Idade do paciente em anos (ex.: 45).
+### **Required Data**
+1. **Age**  
+   - Patient's age in years (e.g., 45).
 
-2. **Sexo**  
-   - Masculino (1)  
-   - Feminino (0).
+2. **Sex**  
+   - Male (1)  
+   - Female (0).
 
-3. **Tipo de Dor no Peito**  
-   - Angina Típica (1): Dor no peito causada por esforço e aliviada pelo repouso.  
-   - Angina Atípica (2): Dor no peito com características incomuns.  
-   - Dor Não Anginosa (3): Desconforto no peito não relacionado ao coração.  
-   - Assintomático (4): Nenhum sintoma relacionado ao peito.
+3. **Chest Pain Type**  
+   - Typical Angina (1): Chest pain caused by exertion and relieved by rest.  
+   - Atypical Angina (2): Chest pain with unusual characteristics.  
+   - Non-Anginal Pain (3): Chest discomfort not related to the heart.  
+   - Asymptomatic (4): No chest-related symptoms.
 
-4. **Pressão em Repouso (mmHg)**  
-   - Pressão arterial medida em repouso, em milímetros de mercúrio (ex.: 120).
+4. **Resting Blood Pressure (mmHg)**  
+   - Blood pressure measured at rest, in millimeters of mercury (e.g., 120).
 
-5. **Colesterol Total (mg/dL)**  
-   - Nível de colesterol no sangue, em miligramas por decilitro (ex.: 200).
+5. **Total Cholesterol (mg/dL)**  
+   - Blood cholesterol level, in milligrams per deciliter (e.g., 200).
 
-6. **Glicemia em Jejum**  
-   - Sim (1): Nível de glicemia em jejum maior que 120 mg/dL.  
-   - Não (0): Nível de glicemia em jejum menor ou igual a 120 mg/dL.
+6. **Fasting Blood Sugar**  
+   - Yes (1): Fasting blood sugar greater than 120 mg/dL.  
+   - No (0): Fasting blood sugar less than or equal to 120 mg/dL.
 
-7. **Resultado do Eletrocardiograma**  
-   - Normal (0): Sem anormalidades detectadas.  
-   - Anormalidade ST-T (1): Alterações nas ondas ST-T do ECG.  
-   - Hipertrofia Ventricular (2): Indício de aumento no tamanho do ventrículo esquerdo.
+7. **Electrocardiogram Results**  
+   - Normal (0): No abnormalities detected.  
+   - ST-T Abnormality (1): Changes in the ST-T waves of the ECG.  
+   - Ventricular Hypertrophy (2): Signs of left ventricular enlargement.
 
-8. **Frequência Cardíaca Máxima (bpm)**  
-   - Frequência cardíaca máxima alcançada durante esforço físico (ex.: 150).
+8. **Maximum Heart Rate (bpm)**  
+   - Maximum heart rate achieved during physical exertion (e.g., 150).
 
-9. **Angina Induzida por Exercício**  
-   - Sim (1): Dor no peito causada por esforço físico.  
-   - Não (0): Nenhuma dor no peito durante esforço físico.
+9. **Exercise-Induced Angina**  
+   - Yes (1): Chest pain caused by physical exertion.  
+   - No (0): No chest pain during physical exertion.
 
-10. **Depressão ST (mm)**  
-    - Diferença do segmento ST no ECG em repouso e durante esforço físico (ex.: 1.5 mm).
+10. **ST Depression (mm)**  
+    - Difference in the ST segment on the ECG at rest and during exertion (e.g., 1.5 mm).
 
-11. **Inclinação do Segmento ST**  
-    - Ascendente (1): Segmento ST inclinado para cima.  
-    - Plano (2): Segmento ST plano.  
-    - Descendente (3): Segmento ST inclinado para baixo.
+11. **Slope of the ST Segment**  
+    - Upsloping (1): ST segment sloping upwards.  
+    - Flat (2): Flat ST segment.  
+    - Downsloping (3): ST segment sloping downwards.
 
-12. **Número de Vasos Principais**  
-    - Número de vasos sanguíneos principais coloridos por fluoroscopia (ex.: 0, 1, 2 ou 3).
+12. **Number of Major Vessels**  
+    - Number of major blood vessels colored by fluoroscopy (e.g., 0, 1, 2, or 3).
 
 13. **Thalassemia**  
-    - Normal (3): Sem sinais de thalassemia.  
-    - Defeito Fixo (6): Defeito permanente detectado.  
-    - Defeito Reversível (7): Defeito transitório detectado.
-   
-      ## 📄 **Como o Modelo Funciona?**
+    - Normal (3): No signs of thalassemia.  
+    - Fixed Defect (6): Permanent defect detected.  
+    - Reversible Defect (7): Temporary defect detected.
 
-O modelo foi desenvolvido para prever o risco de doenças cardíacas com base em dados clínicos de pacientes. Ele utiliza um algoritmo de aprendizado de máquina (Random Forest) e segue o pipeline descrito abaixo:
+---
 
-### **1. Treinamento**
-- **Dataset Utilizado**:  
-  O modelo foi treinado no **Cleveland Heart Disease Dataset**, amplamente utilizado como referência em estudos de predição de doenças cardíacas.
+## 📄 **How the Model Works**
+
+The model was developed to predict the risk of heart disease based on patients' clinical data. It uses a machine learning algorithm (Random Forest) and follows the pipeline described below:
+
+### **1. Training**
+- **Dataset Used**:  
+  The model was trained on the **Cleveland Heart Disease Dataset**, widely used as a reference in heart disease prediction studies.
   
-- **Pré-processamento**:  
-  - Substituição de valores ausentes.  
-  - Balanceamento de classes usando SMOTE (Synthetic Minority Oversampling Technique).  
-  - Normalização das variáveis de entrada para garantir que todos os dados estejam na mesma escala.
+- **Preprocessing**:  
+  - Replacing missing values.  
+  - Balancing classes using SMOTE (Synthetic Minority Oversampling Technique).  
+  - Normalizing input variables to ensure all data are on the same scale.
 
-- **Modelo de Machine Learning**:  
-  Foi utilizado o algoritmo **Random Forest**, que combina múltiplas árvores de decisão para aumentar a precisão e evitar overfitting.
-
----
-
-### **2. Previsão**
-Após o treinamento, o modelo utiliza as variáveis inseridas pelo usuário para calcular a probabilidade de risco de doenças cardíacas. Os dados são processados para garantir que estejam no mesmo formato e escala que o modelo espera.
+- **Machine Learning Model**:  
+  The **Random Forest** algorithm was used, which combines multiple decision trees to increase accuracy and prevent overfitting.
 
 ---
 
-### **3. Classificação**
-O resultado gerado pelo modelo é interpretado em três categorias:
-
-- **Baixo Risco** (< 20%):  
-  A probabilidade de doenças cardíacas é baixa. O paciente é classificado como "provavelmente saudável", mas o acompanhamento periódico é recomendado.
-
-- **Risco Moderado** (20% - 70%):  
-  Existe uma probabilidade significativa de risco, e o paciente deve procurar orientação médica.
-
-- **Alto Risco** (> 70%):  
-  O risco é alto, e o paciente deve procurar um cardiologista urgentemente para avaliação detalhada.
+### **2. Prediction**
+After training, the model uses the user-provided variables to calculate the probability of heart disease risk. The data are processed to ensure they match the format and scale expected by the model.
 
 ---
 
-### **4. Mensagem Personalizada**
-Com base na probabilidade calculada, o sistema fornece uma mensagem personalizada para orientar o usuário. Por exemplo:
+### **3. Classification**
+The result generated by the model is interpreted into three categories:
 
-- **Baixo Risco**:  
-  "Provavelmente saudável. Mantenha hábitos saudáveis e faça acompanhamento médico regularmente."
+- **Low Risk** (< 20%):  
+  The probability of heart disease is low. The patient is classified as "likely healthy," but periodic monitoring is recommended.
 
-- **Alto Risco**:  
-  "Alto risco. Procure um cardiologista imediatamente."
+- **Moderate Risk** (20% - 70%):  
+  There is a significant probability of risk, and the patient should seek medical advice.
 
----
-
-### **5. Limitações**
-- O modelo foi treinado com um dataset pequeno (303 registros), o que pode limitar sua generalização para outros contextos clínicos.
-- Os resultados não devem ser usados como diagnóstico definitivo. Sempre consulte um profissional de saúde.
-
-## 🔧 **Melhorias Futuras**
-
-O projeto pode ser expandido com diversas melhorias para torná-lo mais robusto, flexível e útil em contextos reais. Algumas sugestões incluem:
-
-1. **Expansão do Dataset**:  
-   Utilizar datasets maiores e mais atualizados, como o **MIMIC-IV**, para treinar modelos mais generalizáveis e precisos.
-
-2. **Gráficos Interativos**:  
-   Adicionar gráficos que expliquem visualmente como as variáveis de entrada influenciam o resultado, como gráficos SHAP.
-
-3. **Banco de Dados**:  
-   Integrar um banco de dados para armazenar as previsões, possibilitando análises posteriores e rastreamento de pacientes.
-
-4. **Melhorias na Interface**:  
-   - Suporte multi-idiomas para atingir um público mais amplo.  
-   - Adicionar mais detalhes e exemplos interativos na interface.
-
-5. **Implementação de API REST Completa**:  
-   Tornar a API mais robusta e pronta para integração com outros sistemas, como aplicativos móveis ou sistemas hospitalares.
-
-6. **Suporte a Múltiplos Modelos**:  
-   Incluir outros algoritmos de aprendizado de máquina (como Gradient Boosting ou Redes Neurais) e comparar os desempenhos para diferentes cenários.
+- **High Risk** (> 70%):  
+  The risk is high, and the patient should urgently consult a cardiologist for a detailed evaluation.
 
 ---
 
-## 📜 **Licença**
+### **4. Personalized Message**
+Based on the calculated probability, the system provides a personalized message to guide the user. For example:
 
-Este projeto é de uso exclusivo para fins educacionais e acadêmicos. Ele não foi projetado para uso clínico ou diagnóstico oficial. Os resultados gerados são apenas indicativos e não substituem a avaliação de um profissional de saúde.
+- **Low Risk**:  
+  "Likely healthy. Maintain healthy habits and have regular medical check-ups."
 
-Se deseja usar ou modificar este projeto, consulte o arquivo `LICENSE` para mais informações sobre os termos de uso.
+- **High Risk**:  
+  "High risk. Consult a cardiologist immediately."
 
+---
 
-   
+### **5. Limitations**
+- The model was trained with a small dataset (303 records), which may limit its generalization to other clinical contexts.
+- The results should not be used as a definitive diagnosis. Always consult a healthcare professional.
+
+## 🔧 **Future Improvements**
+
+The project can be expanded with various enhancements to make it more robust, flexible, and useful in real-world contexts. Some suggestions include:
+
+1. **Dataset Expansion**:  
+   Use larger and more up-to-date datasets, such as **MIMIC-IV**, to train more generalizable and accurate models.
+
+2. **Interactive Charts**:  
+   Add charts that visually explain how input variables influence the result, such as SHAP plots.
+
+3. **Database Integration**:  
+   Integrate a database to store predictions, allowing for further analysis and patient tracking.
+
+4. **Interface Improvements**:  
+   - Multi-language support to reach a broader audience.  
+   - Add more details and interactive examples in the interface.
+
+5. **Full REST API Implementation**:  
+   Make the API more robust and ready for integration with other systems, such as mobile apps or hospital systems.
+
+6. **Support for Multiple Models**:  
+   Include other machine learning algorithms (such as Gradient Boosting or Neural Networks) and compare their performances for different scenarios.
+
+---
+
+## 📜 **License**
+
+This project is intended exclusively for educational and academic purposes. It is not designed for clinical use or official diagnosis. The generated results are indicative only and do not replace the evaluation of a healthcare professional.
+
+If you wish to use or modify this project, please refer to the `LICENSE` file for more information on usage terms.
+
